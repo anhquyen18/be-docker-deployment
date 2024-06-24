@@ -62,7 +62,10 @@ jobs:
 
       - run:
           name: "Install Composer Dependencies"
-          command: composer install --prefer-dist --no-interaction
+          command: |
+            composer update
+            composer install --prefer-dist --no-interaction
+          
 
       # Lưu bộ nhớ cache Composer
       - save_cache:
