@@ -40,13 +40,11 @@ jobs:
             curl -sS https://getcomposer.org/installer | php
             sudo mv composer.phar /usr/local/bin/composer
 
-      - run: sudo mkdir /usr/src/php
-
       - run:
           name: "Install PHP Extensions"
           command: |
             sudo apt-get update && sudo apt-get install -y libpq-dev
-            docker-php-ext-install pdo pdo_pgsql
+            sudo docker-php-ext-install pdo pdo_pgsql
 
       - run:
           name: "Copy .env File"
