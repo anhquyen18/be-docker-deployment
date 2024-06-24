@@ -30,7 +30,10 @@ jobs:
             - composer-cache-{{ .Branch }}
             - composer-cache
 
-      # - run: sudo apt update
+      - run: sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 6494C6D6997C215E
+
+      - run: sudo apt update
+      
       - run:
           name: "Install Composer"
           command: |
