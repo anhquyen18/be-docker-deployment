@@ -81,7 +81,7 @@ jobs:
           name: "Run Database Migrations"
           command: php artisan migrate --force
 
-      - run: ./vencor/bin/phpunit
+      - run: ./vendor/bin/phpunit
 
       - run:
           name: "Run Tests"
