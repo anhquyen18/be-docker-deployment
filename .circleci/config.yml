@@ -30,7 +30,7 @@ jobs:
             - composer-cache-{{ .Branch }}
             - composer-cache
 
-      - run: sudo apt update
+      # - run: sudo apt update
       - run:
           name: "Install Composer"
           command: |
