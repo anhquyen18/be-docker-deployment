@@ -18,6 +18,10 @@ Route::get('/test', function () {
     return response()->json(['data' => 'Kiểm tra hoạt động của route', 'message' => 'Yêu cầu thành công.']);
 });
 
+Route::get('/test01', function () {
+    return response()->json(['data' => 'Kiểm tra deployyyyyyyyy!', 'message' => 'Yêu cầu thành công.']);
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
